@@ -5,9 +5,10 @@ import { AppGuard } from './app.guard';
 const routes: Routes = [
   { path: 'customers/:id', loadChildren: () => import('./customers/customers.module').then(m => m.CustomersModule), canLoad: [AppGuard]},
   { path: '', loadChildren: () => import('./login/login.module').then(m => m.LoginModule) },
+  { path: '404', loadChildren: () => import('./not-found/not-found.module').then(m => m.NotFoundModule) },
   {
     path: '**',
-    redirectTo: '',
+    redirectTo: '404',
     pathMatch: 'full'
   },
 ];
