@@ -1,0 +1,37 @@
+<div class="content">
+  <mat-card>
+    <mat-card-content>
+      <h1>Datos del usuario</h1>
+      <div class="info">
+        <div>
+          <span class="bold">Nombre: </span>
+          <span>{{customer?.name}}</span>
+        </div>
+        <div>
+          <span class="bold">Apellido: </span>
+          <span>{{customer?.lastName}}</span>
+        </div>
+        <div>
+          <span class="bold">Tipo de documento: </span>
+          <span>{{customer?.documentType}}</span>
+        </div>
+        <div>
+          <span class="bold">Número de documento: </span>
+          <span>{{customer?.identificationNumber}}</span>
+        </div>
+        <div *ngIf="customer?.email">
+          <span class="bold">Correo: </span>
+          <span>{{customer?.email}}</span>
+        </div>
+        <div *ngIf="customer?.address">
+          <span class="bold">Dirección: </span>
+          <span>{{customer?.address}}</span>
+        </div>
+        <div *ngIf="customer?.phone">
+          <span class="bold">Telefono: </span>
+          <span>{{customer?.phone}}</span>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

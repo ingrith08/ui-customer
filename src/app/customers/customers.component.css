@@ -1,0 +1,27 @@
+.content {
+  max-width: 500px;
+ margin: auto;
+}
+
+.info {
+  text-align: left;
+}
+
+.info div {
+  margin: 15px;
+  font-size: 16px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+mat-card {
+  max-width: 400px;
+  margin: 2em auto;
+  text-align: center;
+}
+
+mat-form-field {
+  display: block;
+}

@@ -1,0 +1,30 @@
+<div class="content">
+  <mat-card>
+    <mat-card-content>
+      <form #form="ngForm" [formGroup]="formData" (ngSubmit)="form.valid && onSubmit()">
+        <h2>Log In</h2>
+        <div *ngIf="error" class="error"><span class="bold">ERROR:</span> La contraseña o el usuario que has introducido
+          es incorrecto.</div>
+        <mat-form-field appearance="outline">
+          <mat-label>Usuario</mat-label>
+          <input type="text" name="user" matInput formControlName="userName" />
+          <mat-error *ngIf="userName.invalid && userName.errors.required">Ingrese su usuario</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Contraseña</mat-label>
+          <input [type]="hide ? 'password' : 'text'" name="password" matInput formControlName="password" />
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+          <mat-error *ngIf="password.invalid && password.errors.required">Ingrese su contraseña</mat-error>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" (click)="form.onSubmit(undefined)"
+          [attr.disabled]="formButtonDisabled? true: null">
+          Acceptar
+        </button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

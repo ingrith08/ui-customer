@@ -1,0 +1,28 @@
+.content {
+  max-width: 500px;
+  margin: auto;
+}
+
+.error {
+  color: #ec0707ed;
+  border: 1px solid #ec0707ed;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #ff00000a;
+  text-align: left;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+mat-card {
+  max-width: 400px;
+  margin: 2em auto;
+  text-align: center;
+}
+
+mat-form-field {
+  display: block;
+}
